@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# backup the current ~/.bash_profile
+if [ -s "$HOME/.bash_profile" ]; then
+	cp $HOME/.bash_profile $HOME/.bash_profile_dotfiles_bak
+	rm $HOME/.bash_profile
+fi
+
+for file in ".bash_profile" ".extras" ".bash_aliases" ".gitconfig"
+do
+	ln -s ${PWD}/$file $HOME/$file
+done
+
+# load in the new .bash_profile immediately
+source ~/.bash_profile
