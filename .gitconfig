@@ -16,3 +16,5 @@
 	tool = Kaleidoscope
 [credential]
 	helper = osxkeychain
+[core]
+	autocrlf = input
