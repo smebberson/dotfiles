@@ -18,7 +18,7 @@ if [ -s ~/.extras ] || [ -h ~/.extras ]; then
 fi
 
 # Add in aliases
-if [ -s ~/.bash_aliases ]; then
+if [ -s ~/.bash_aliases ] || [ -h ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
 
