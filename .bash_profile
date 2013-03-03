@@ -22,6 +22,10 @@ if [ -s ~/.bash_aliases ] || [ -h ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
 
+# Add in themes
+source ~/.bash_colors
+source ~/.bash_prompt
+
 # {{{
 # Node Completion - Auto-generated, do not touch.
 shopt -s progcomp

@@ -6,7 +6,7 @@ if [ -s "$HOME/.bash_profile" ]; then
 	rm $HOME/.bash_profile
 fi
 
-for file in ".bash_profile" ".extras" ".bash_aliases" ".gitconfig"
+for file in ".bash_profile" ".extras" ".bash_aliases" ".bash_colors" ".bash_theme" ".gitconfig"
 do
 	ln -s ${PWD}/$file $HOME/$file
 done
