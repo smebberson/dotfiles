@@ -3,6 +3,9 @@
 alias lsl='ls -l'
 alias lsa='ls -la'
 
+# coldfusion shortcuts
+alias cf='sudo coldfusion'
+
 # git command shortcuts
 alias gs='git status'
 alias ga='git add -A'
