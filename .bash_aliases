@@ -15,6 +15,8 @@ alias gr='git remote'
 alias gpl='git pull'
 alias gf='git fetch'
 alias gco='git checkout'
+alias gpb='git push -u origin'
+alias gb='git branch'
 
 # to specific directories
 alias snippets='cd /Users/smebberson/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/tma-snippets'
