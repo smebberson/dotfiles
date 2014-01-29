@@ -7,6 +7,9 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 # Phantomjs configration
 export PATH=$PATH:/opt/phantomjs/bin
 
+# For nginx
+export PATH=$PATH:/usr/local/nginx:/usr/local/nginx/sbin
+
 # Node version manager
 if [ -s ~/.nvm/nvm.sh ]; then
 	source ~/.nvm/nvm.sh
