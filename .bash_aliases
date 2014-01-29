@@ -22,6 +22,11 @@ alias gdt='git difftool'
 alias gl='git log'
 alias gbc='git checkout -b'
 
+# git command shortcuts via function
+function gbco () {
+	git checkout -b "$1" && git push -u origin "$1"
+}
+
 # to specific directories
 alias snippets='cd /Users/smebberson/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/tma-snippets'
 alias dotfiles='cd /Library/WebServer/dotfiles/'
