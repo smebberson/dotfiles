@@ -21,7 +21,7 @@ alias gd='git diff'
 alias gdt='git difftool'
 alias gl='git log'
 alias gbc='git checkout -b'
-alias gt='git log --graph --pretty=oneline --abbrev-commit'
+alias gt='git log --pretty=oneline --abbrev-commit --name-status'
 
 # git command shortcuts via function
 function gbco () {
