@@ -1,0 +1,18 @@
+
+# nodejs
+export NODE_ENV=development
+
+# dc-smebberson
+alias dc-smebberson='export SETTINGS_FLAVOR=smebberson.conf'
+
+# dc-fdm
+alias dc-fdm='export SETTINGS_FLAVOR=fdm.conf'
+
+# docker
+function b2d-setup () {
+	boot2docker init
+	boot2docker start
+	export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+}
+
+alias b2d='boot2docker'

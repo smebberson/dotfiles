@@ -15,9 +15,9 @@ if [ -s ~/.nvm/nvm.sh ]; then
 	source ~/.nvm/nvm.sh
 fi
 
-# Add in extras
-if [ -s ~/.extras ] || [ -h ~/.extras ]; then
-	source ~/.extras
+# Add in .development
+if [ -s ~/.development ] || [ -h ~/.development ]; then
+	source ~/.development
 fi
 
 # Add in aliases
