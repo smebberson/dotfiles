@@ -17,6 +17,4 @@ The following setup, and applications are expected for these dotfiles to functio
 - VMware Fusion
 - Vagrant
     - Plugins:
-        - vagrant-berkshelf
         - vagrant-vmware-fusion
-- Chef-SDK
