@@ -23,9 +23,13 @@ alias gl='git log'
 alias gbc='git checkout -b'
 alias gt='git log --pretty=oneline --abbrev-commit --name-status'
 
-# git command shortcuts via function
+# git command shortcuts via functions
 function gbco () {
 	git checkout -b "$1" && git push -u origin "$1"
+}
+
+function gtag () {
+	git tag -a "$1" -m "$2" && git push origin "$1"
 }
 
 # to specific directories
