@@ -32,6 +32,10 @@ function gtag () {
 	git tag -a "$1" -m "$2" && git push origin "$1"
 }
 
+function gbdo () {
+	git branch -D "$1" && git push origin ":$1"
+}
+
 # to specific directories
 alias snippets='cd /Users/smebberson/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/tma-snippets'
 alias dotfiles='cd /Library/WebServer/dotfiles/'
