@@ -1,17 +1,20 @@
 
-# Git v2.0.1
-export PATH="/usr/local/git/bin:$PATH"
+# keep our files modular and specific
+# load them in as a standalone, and their platform specific counterparts too
+for ref in ".development" ".bash_aliases" ".bash_colors" ".bash_prompt" ".bash_exports"; do
 
-# Add in .development
-if [ -s ~/.development ] || [ -h ~/.development ]; then
-	source ~/.development
-fi
+	# do the file itself
+	if [ -e $HOME/$ref ] || [ -h $HOME/$ref ]; then
+		source $HOME/$ref
+	fi
 
-# Add in aliases
-if [ -s ~/.bash_aliases ] || [ -h ~/.bash_aliases ]; then
-	source ~/.bash_aliases
-fi
+	# do anything platform specific related
+	for pf in "linux" "mac"; do
 
-# Add in themes
-source ~/.bash_colors
-source ~/.bash_prompt
+		if [ -e $HOME/"$ref_$pf" ] || [ -h $HOME/"$ref_$pf" ]; then
+			source $HOME/"$ref_$pf"
+		fi
+
+	done
+
+done

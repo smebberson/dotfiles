@@ -1,0 +1,3 @@
+
+# Git v2.0.1
+export PATH="/usr/local/git/bin:$PATH"

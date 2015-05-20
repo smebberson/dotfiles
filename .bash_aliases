@@ -3,9 +3,6 @@
 alias lsl='ls -l'
 alias lsa='ls -la'
 
-# coldfusion shortcuts
-alias cf='sudo coldfusion'
-
 # git command shortcuts
 alias gs='git status'
 alias ga='git add -A'
@@ -37,6 +34,11 @@ function gbdo () {
 	git branch -D "$1" && git push origin ":$1"
 }
 
-# to specific directories
-alias snippets='cd /Users/smebberson/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/tma-snippets'
-alias dotfiles='cd /Library/WebServer/dotfiles/'
+# do anything platform specific related
+for pf in "linux" "mac"; do
+
+	if [ -e "${HOME}/.bash_aliases_${pf}" ] && [ "${PLATFORM}" = "${pf}" ]; then
+		source "${HOME}/.bash_aliases_${pf}"
+	fi
+
+done

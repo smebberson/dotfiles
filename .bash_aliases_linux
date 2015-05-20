@@ -1,0 +1,3 @@
+
+# to specific directories
+alias dotfiles='cd $HOME/dotfiles/'

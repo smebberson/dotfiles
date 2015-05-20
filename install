@@ -1,15 +1,42 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# backup the current ~/.bash_profile
-if [ -s "$HOME/.bash_profile" ]; then
-	cp $HOME/.bash_profile $HOME/.bash_profile_dotfiles_bak
-	rm $HOME/.bash_profile
+# check that we have a platform variable
+if [ -z "${PLATFORM}" ]; then
+	echo "You must create an environment variable called PLATFORM with either 'mac' or 'linux'"
+	exit 1
 fi
 
-for file in ".bash_profile" ".development" ".bash_aliases" ".bash_colors" ".bash_prompt" ".gitconfig"
-do
-	ln -s ${PWD}/$file $HOME/$file
+# backup the current ~/.bash_profile
+if [ -s "${HOME}/.bash_profile" ]; then
+	cp ${HOME}/.bash_profile ${HOME}/.bash_profile_dotfiles_bak
+	rm ${HOME}/.bash_profile
+	echo "The previous .bash_profile was backed up."
+fi
+
+# install the various files
+for file in ".bash_profile" ".development" ".bash_aliases" ".bash_colors" ".bash_prompt"; do
+
+	if [ -e ${PWD}/${file} ] && [ ! -h ${HOME}/${file} ]; then
+		ln -s ${PWD}/${file} ${HOME}/${file}
+		echo "Installed ${file}"
+	fi
+
+	# and their platform specific counterparts
+	for pf in "mac" "linux"; do
+
+		if [ -e "${PWD}/${file}_${pf}" ] && [ ! -h "${HOME}/${file}_${pf}" ] && [ "${PLATFORM}" = "${pf}" ]; then
+			ln -s "${PWD}/${file}_${pf}" "${HOME}/${file}_${pf}"
+			echo "Installed ${file}_${pf}"
+		fi
+
+	done
+
 done
 
+# setup the gitconfig file which is specific to platform
+cp ${PWD}/platform/${PLATFORM}/.gitconfig ${HOME}/.gitconfig
+echo "Installed .gitconfig"
+
 # load in the new .bash_profile immediately
-source ~/.bash_profile
+source ${HOME}/.bash_profile
+echo "Installed the new setup, into this terminal session"
