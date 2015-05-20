@@ -18,3 +18,5 @@
 	helper = osxkeychain
 [core]
 	autocrlf = input
+[push]
+	default = simple
