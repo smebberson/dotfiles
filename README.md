@@ -14,7 +14,6 @@ Requirements
 The following setup, and applications are expected for these dotfiles to function correctly:
 
 - Git, >2.0.1 (at /usr/local/git/bin/git on Mac)
-- An environment variable `PLATFORM` with the value of either `mac` or `linux`
 
 Setup
 -----
@@ -22,8 +21,8 @@ Setup
 1. Download this repository into:
     - Linux: /projects/dotfiles
     - Mac: /Library/WebServer/dotfiles
-1. Create the `PLATFORM` environment variable with `export PLATFORM=mac`
 1. Execute `cd /Library/WebServer/dotfiles`
+1. Create either a .mac or .linux file with `touch .mac` in this repository's directory
 1. Execute `./install`
 
 For Mac, everything should be working now.

@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 
+set PLATFORM
+
+# try and find a platform file
+for pf in "mac" "linux"; do
+
+	if [ -e "${PWD}/.${pf}" ]; then
+		PLATFORM=$pf
+	fi
+
+done
+
 # check that we have a platform variable
-if [ -z "${PLATFORM}" ]; then
-	echo "You must create an environment variable called PLATFORM with either 'mac' or 'linux'"
+if [ -z "${PLATFORM+x}" ]; then
+	echo "You must create either a .mac or .linux file in this folder."
 	exit 1
 fi
 
@@ -12,6 +23,10 @@ if [ -s "${HOME}/.bash_profile" ]; then
 	rm ${HOME}/.bash_profile
 	echo "The previous .bash_profile was backed up."
 fi
+
+# create a platform file that will be loaded by .bash_profile
+echo "${PLATFORM}" > $HOME/.platform
+echo ".platform created"
 
 # install the various files
 for file in ".bash_profile" ".development" ".bash_aliases" ".bash_colors" ".bash_prompt"; do

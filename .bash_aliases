@@ -33,12 +33,3 @@ function gtag () {
 function gbdo () {
 	git branch -D "$1" && git push origin ":$1"
 }
-
-# do anything platform specific related
-for pf in "linux" "mac"; do
-
-	if [ -e "${HOME}/.bash_aliases_${pf}" ] && [ "${PLATFORM}" = "${pf}" ]; then
-		source "${HOME}/.bash_aliases_${pf}"
-	fi
-
-done
