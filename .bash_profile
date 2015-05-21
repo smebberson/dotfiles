@@ -7,7 +7,7 @@ PLATFORM=$(cat ~/.platform)
 
 # keep our files modular and specific
 # load them in as a standalone, and their platform specific counterparts too
-for ref in ".development" ".bash_aliases" ".bash_colors" ".bash_prompt" ".bash_exports"; do
+for ref in ".development" ".bash_aliases" ".bash_colors" ".bash_prompt" ".bash_exports" "z.sh"; do
 
 	# do the file itself
 	if [ -e $HOME/$ref ] || [ -h $HOME/$ref ]; then
