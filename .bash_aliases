@@ -3,6 +3,10 @@
 alias lsl='ls -l'
 alias lsa='ls -la'
 
+# vagrant shortcuts
+alias v='vagrant'
+alias vs='vagrant ssh'
+
 # git command shortcuts
 alias gs='git status'
 alias ga='git add -A'
