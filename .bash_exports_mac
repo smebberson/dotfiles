@@ -1,3 +1,6 @@
 
 # Git v2.0.1
-export PATH="/usr/local/git/bin:$PATH"
+# export PATH="/usr/local/git/bin:$PATH"
+
+# Section.io CLI.
+export PATH="$PATH:/Library/WebServer/section.cli"

@@ -24,3 +24,11 @@ for ref in ".development" ".bash_aliases" ".bash_colors" ".bash_prompt" ".bash_e
 	done
 
 done
+
+# Node.js version manager.
+export NVM_DIR="/Users/smebberson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Ruby version manager.
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
