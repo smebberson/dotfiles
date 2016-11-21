@@ -3,4 +3,4 @@
 # export PATH="/usr/local/git/bin:$PATH"
 
 # Section.io CLI.
-export PATH="$PATH:/Library/WebServer/section.cli"
+export PATH="$PATH:/Library/Web/section.cli"

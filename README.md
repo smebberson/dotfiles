@@ -20,8 +20,8 @@ Setup
 
 1. Download this repository into:
     - Linux: /projects/dotfiles
-    - Mac: /Library/WebServer/dotfiles
-1. Execute `cd /Library/WebServer/dotfiles`
+    - Mac: /Library/Web/dotfiles
+1. Execute `cd /Library/Web/dotfiles`
 1. Create either a .mac or .linux file with `touch .mac` in this repository's directory
 1. Execute `./install`
 
