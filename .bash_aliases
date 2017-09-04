@@ -10,6 +10,7 @@ alias vs='vagrant ssh'
 # git command shortcuts
 alias gs='git status'
 alias ga='git add -A'
+alias gav='git add */**/version.json && git add package.json'
 alias gp='git push'
 alias gc='git commit'
 alias gca='git commit --amend --no-edit'
