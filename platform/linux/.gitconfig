@@ -1,9 +1,0 @@
-[user]
-	name = Scott Mebberson
-	email = scott@scottmebberson.com
-[credential]
-	helper = cache --timeout=172800
-[diff]
-	external = /home/smebberson/diff.sh
-[push]
-	default = simple

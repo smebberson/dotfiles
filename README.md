@@ -2,33 +2,15 @@
 
 My dotfiles, my portable bash customisations. All based on bash.
 
-## OS Details
+These dotfiles are the customised extension based on [idearium/idearium/dotfiles](https://github.com/idearium/idearium/tree/master/dotfiles).
 
-These dotfiles have been designed to work on Mac and Linux (tested on Ubuntu only).
+## idearium/dotfiles
 
-## Requirements
+To have this repository installed after the Idearium dotfiles, create an executable `custom.sh` containing the following:
 
-The following setup, and applications are expected for these dotfiles to function correctly:
-
-- Git, >2.0.1 (at `/usr/local/git/bin/git` on Mac)
-
-## Setup
-
-1. Download this repository into:
-    - Linux: `/projects/dotfiles`.
-    - Mac: `/Library/Web/dotfiles`.
-1. Execute `cd /Library/Web/dotfiles`.
-1. Create either a `.mac` or `.linux` file with `touch .mac` in this repository's directory.
-1. Execute `./install`.
-
-_For Mac_, everything should be working now.
-
-_For Ubuntu_, follow these additional steps:
-
-1. Add the following to ~/.bashrc
-
-```sh
-if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
-fi
+```bash
+curl https://raw.githubusercontent.com/smebberson/dotfiles/master/install.sh | bash
 ```
+
+Idearium dotfiles will do its thing, and then install further packages as per this repository.
+
