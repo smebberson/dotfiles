@@ -22,3 +22,10 @@ if ! brew list -1 | grep -q "^$(echo 'sudolikeaboss' | cut -d' ' -f1)\$"; then
     brew install sudolikeaboss
 
 fi
+
+# Querious
+if ! brew cask list -1 | grep -q "^$(echo 'querious' | cut -d' ' -f1)\$"; then
+
+    brew cask install querious
+
+fi
